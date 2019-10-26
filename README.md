@@ -1,4 +1,4 @@
-![](https://i.imgsafe.org/4c/4c24056777.png)
+![](https://i.imgsafe.org/4c/4c403200ac.png)
 
 [![npm](https://img.shields.io/npm/v/observar?style=for-the-badge)](https://www.npmjs.com/package/observar)
 
