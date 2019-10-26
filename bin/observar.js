@@ -127,7 +127,7 @@ const getHelp = () => chalk`
       '--version': Boolean,
       '--experimental': Boolean,
       '--script': String,
-      '--ignore': String,
+      '--ignore': [String],
       '-h': '--help',
       '-v': '--version',
       '-s': '--script',
