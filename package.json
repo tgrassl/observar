@@ -1,0 +1,55 @@
+{
+  "name": "observar",
+  "version": "1.1.0",
+  "description": "Observar is a simple file watcher and command executor for your favourite static file server",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tgrassl/observar.git"
+  },
+  "keywords": [
+    "observe",
+    "watch",
+    "file"
+  ],
+  "author": "Timon Grassl <grassl.timon@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tgrassl/observar/issues"
+  },
+  "homepage": "https://github.com/tgrassl/observar#readme",
+  "scripts": {
+    "format": "prettier --write src/index.js",
+    "lint": "./node_modules/.bin/eslint src/index.js",
+    "prepublishOnly": "npm test && npm run lint",
+    "bumpVersion:patch": "npm version patch",
+    "bumpVersion:minor": "npm version minor",
+    "bumpVersion:major": "npm version major"
+  },
+  "preferGlobal": true,
+  "bin": {
+    "observar": "./bin/observar.js"
+  },
+  "git": {
+    "pre-commit": "lint"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "files": [
+    "bin"
+  ],
+  "dependencies": {
+    "boxen": "^4.1.0",
+    "chalk": "^2.4.2",
+    "chokidar": "^3.0.2",
+    "clipboardy": "^2.1.0",
+    "yargs": "^14.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^12.7.4",
+    "eslint": "^6.6.0",
+    "fs-extra": "^8.1.0",
+    "prettier": "1.18.2",
+    "rollup": "^1.25.2"
+  }
+}
