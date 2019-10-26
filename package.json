@@ -1,7 +1,7 @@
 {
   "name": "observar",
-  "version": "1.1.0",
-  "description": "Observar is a simple file watcher and command executor for your favourite static file server",
+  "version": "1.0.0",
+  "description": "Watch and act! - Observar is a simple file watcher and command executor",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tgrassl/observar.git"
@@ -9,7 +9,7 @@
   "keywords": [
     "observe",
     "watch",
-    "file"
+    "execute"
   ],
   "author": "Timon Grassl <grassl.timon@gmail.com>",
   "license": "MIT",
@@ -18,9 +18,12 @@
   },
   "homepage": "https://github.com/tgrassl/observar#readme",
   "scripts": {
-    "format": "prettier --write src/index.js",
-    "lint": "./node_modules/.bin/eslint src/index.js",
+    "format": "prettier --write bin/observar.js",
+    "lint": "./node_modules/.bin/eslint bin/observar.js",
     "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A",
+    "postversion": "git push && git push --tags",
     "bumpVersion:patch": "npm version patch",
     "bumpVersion:minor": "npm version minor",
     "bumpVersion:major": "npm version major"
@@ -29,9 +32,6 @@
   "bin": {
     "observar": "./bin/observar.js"
   },
-  "git": {
-    "pre-commit": "lint"
-  },
   "engines": {
     "node": ">=8"
   },
@@ -39,17 +39,17 @@
     "bin"
   ],
   "dependencies": {
+    "arg": "^4.1.1",
+    "await-exec": "^0.1.2",
     "boxen": "^4.1.0",
     "chalk": "^2.4.2",
     "chokidar": "^3.0.2",
-    "clipboardy": "^2.1.0",
-    "yargs": "^14.2.0"
+    "log-symbols": "^3.0.0",
+    "ora": "^4.0.2"
   },
   "devDependencies": {
     "@types/node": "^12.7.4",
     "eslint": "^6.6.0",
-    "fs-extra": "^8.1.0",
-    "prettier": "1.18.2",
-    "rollup": "^1.25.2"
+    "prettier": "1.18.2"
   }
 }
