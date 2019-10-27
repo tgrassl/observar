@@ -1,6 +1,7 @@
 ![](https://i.imgsafe.org/4c/4c403200ac.png)
 
-[![npm](https://img.shields.io/npm/v/observar?style=for-the-badge)](https://www.npmjs.com/package/observar)
+[![npm](https://flat.badgen.net/npm/v/observar)](https://www.npmjs.com/package/observar)
+[![install size](https://flat.badgen.net/packagephobia/install/observar)](https://packagephobia.now.sh/result?p=observar)
 
 Watch and act! - `observar` is a simple file watcher and command executor that helps you during development.
 
