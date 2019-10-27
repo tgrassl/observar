@@ -1,6 +1,6 @@
 {
   "name": "observar",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Watch and act! - Observar is a simple file watcher and command executor",
   "repository": {
     "type": "git",
