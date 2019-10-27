@@ -9,7 +9,12 @@
   "keywords": [
     "observe",
     "watch",
-    "execute"
+    "execute",
+    "watchFile",
+    "watcher",
+    "watching",
+    "file",
+    "command"
   ],
   "author": "Timon Grassl <grassl.timon@gmail.com>",
   "license": "MIT",
@@ -18,8 +23,10 @@
   },
   "homepage": "https://github.com/tgrassl/observar#readme",
   "scripts": {
-    "format": "prettier --write bin/observar.js",
+    "format": "prettier --write bin/observar.js test.js",
     "lint": "./node_modules/.bin/eslint bin/observar.js",
+    "mocha": "nyc --reporter=text mocha",
+    "test": "npm run lint && npm run mocha",
     "prepublishOnly": "npm test && npm run lint",
     "preversion": "npm run lint",
     "version": "npm run format && git add -A",
@@ -40,7 +47,6 @@
   ],
   "dependencies": {
     "arg": "^4.1.1",
-    "await-exec": "^0.1.2",
     "boxen": "^4.1.0",
     "chalk": "^2.4.2",
     "chokidar": "^3.0.2",
@@ -49,7 +55,13 @@
   },
   "devDependencies": {
     "@types/node": "^12.7.4",
+    "chai": "^4.2.0",
     "eslint": "^6.6.0",
-    "prettier": "1.18.2"
+    "mocha": "^6.2.2",
+    "nyc": "^14.1.1",
+    "prettier": "1.18.2",
+    "rewire": "^4.0.1",
+    "sinon": "^7.5.0",
+    "sinon-chai": "^3.3.0"
   }
 }

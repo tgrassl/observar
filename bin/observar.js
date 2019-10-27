@@ -15,9 +15,10 @@ const info = message => `${logSymbols.info} ${message}`;
 const err = message => `${logSymbols.error} ${message}`;
 
 const primaryColor = chalk.rgb(255, 179, 71);
+let watcher;
 
 const startObservar = config => {
-  const watcher = chokidar.watch(config.watchPattern, {
+  watcher = chokidar.watch(config.watchPattern, {
     ignored: config.ignorePattern,
     persistent: true,
     awaitWriteFinish: true,
