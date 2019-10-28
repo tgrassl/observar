@@ -19,17 +19,17 @@ observar -s my_command
 ```
 By default `observar` will watch your current directory but you can also change this setting:
 
-Single folder
+__Single folder__
 ```bash
 observar folder_name -s my_command
 ```
 
-Multiple folders
+__Multiple folders__
 ```bash
 observar folder_name folder2_name -s my_command
 ```
 
-Glob Pattern e.g. src/**.js
+__Glob Pattern e.g. src/**.js__
 ```bash
 observar glob_pattern -s my_command
 ```
@@ -50,3 +50,8 @@ observar --help
 ```bash
 $ observar src/**.js -s format-lint -i dist/
 ```
+
+## License
+Code released under the [MIT License](https://github.com/tgrassl/observar/blob/master/LICENSE).
+
+Enjoy ⭐️
