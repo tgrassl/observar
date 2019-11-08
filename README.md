@@ -48,7 +48,7 @@ observar --help
 
 ### Example Usage
 ```bash
-$ observar src/**.js -s format-lint -i dist/
+$ observar src/**.js -s format-lint -i src/ignore-this-folder/
 ```
 
 ## License
