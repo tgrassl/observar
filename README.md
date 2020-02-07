@@ -1,4 +1,4 @@
-![](https://i.imgsafe.org/4c/4c403200ac.png)
+![](https://i.ibb.co/LJVnKvd/observar-repo-banner-2.png)
 
 [![npm](https://flat.badgen.net/npm/v/observar)](https://www.npmjs.com/package/observar)
 [![install size](https://flat.badgen.net/packagephobia/install/observar)](https://packagephobia.now.sh/result?p=observar)
